@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './components/Home'
 import { useAuth0 } from "@auth0/auth0-react";
 import Jobpage from './components/Jobpage';
+import Loginpage from './Loginpage';
 
 function App() {
   
@@ -16,7 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         
-          <Route path='/Jobpage' element={<Jobpage/>}/>
+          <Route path='/Jobpage' element={ isAuthenticated ? <Jobpage/> : <Loginpage/>}/>
         
       </Routes>
     </Router>
@@ -24,5 +25,5 @@ function App() {
     </>
   )
 }
-
+//<Route path='/Jobpage' element={<Jobpage/>}/> : <Route path='/Loginpage' element={<Loginpage/>}/>
 export default App
