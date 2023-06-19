@@ -1,15 +1,26 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './components/Home'
+import { useAuth0 } from "@auth0/auth0-react";
+import Jobpage from './components/Jobpage';
 
 function App() {
   
+  const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
 
   return (
     <>
-      <Navbar/>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        
+          <Route path='/Jobpage' element={<Jobpage/>}/>
+        
+      </Routes>
+    </Router>
+      
     </>
   )
 }
