@@ -6,6 +6,7 @@ import Home from './components/Home'
 import { useAuth0 } from "@auth0/auth0-react";
 import Jobpage from './components/Jobpage';
 import Loginpage from './Loginpage';
+import Jobdeatils from './components/Jobdeatils';
 
 function App() {
   
@@ -18,7 +19,8 @@ function App() {
         <Route path='/' element={<Home/>}/>
         
           <Route path='/Jobpage' element={ isAuthenticated ? <Jobpage/> : <Loginpage/>}/>
-        
+          <Route path='/job/:id' element={<Jobdeatils/>}/>
+
       </Routes>
     </Router>
       
