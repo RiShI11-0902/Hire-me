@@ -20,7 +20,8 @@ const Jobdeatils = () => {
     useEffect(() => {
       fetch(url, options).then(  response   => response.json())
         .then( response  => setData(response))
-    }, [])
+    }, [params.id])
+    console.log(data);
   return (
     <>
     {
