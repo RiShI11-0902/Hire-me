@@ -9,7 +9,7 @@ const Navbar = () => {
   const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
   return (
     <>
-      <div className="navbar  top-10 flex items-center left-10 space-x-10 md:space-x-40 w-fit fixed z-10 justify-between  mx-auto">
+      <div className="navbar  top-10 flex items-center left-10 space-x-10 md:space-x-40 w-fit absolute z-10 justify-between  mx-auto">
         <div className="left">
           <div className="logo w-36 text-2xl font-extrabold md:text-5xl text-purple-950">
               HIRE ME.
