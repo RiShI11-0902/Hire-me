@@ -15,7 +15,7 @@ const Jobpage = () => {
   const [reuire, setRequire] = useState("")
   const [loading, setLoading] = useState(true)
   //web%20developer%20in%20Texas%2C%20USA
-  const url = `https://jsearch.p.rapidapi.com/search?query=${title}${place}&page=1&date_posted=all&remote_jobs_only=false&employment_types=INTERN&job_requirements=no_experience`
+  const url = `https://jsearch.p.rapidapi.com/search?query=${title} ${place}&page=1&date_posted=all&remote_jobs_only=false&employment_types=INTERN&job_requirements=no_experience`
 
   const options = {
     method: 'GET',
@@ -29,6 +29,10 @@ const Jobpage = () => {
     fetch(url, options).then(response => response.json())
       .then(response => setData(response))
   }, [])
+
+  
+  // const name = `${title} ${place}`
+  // console.log(name);
 
   return (
     <>
@@ -44,7 +48,7 @@ const Jobpage = () => {
           </div>
         </div>
         <div className="list">
-          <Jobbox title={ title } place={ place } jobs={data} />
+          <Jobbox  jobs={data} />
         </div>
       </div>
 
