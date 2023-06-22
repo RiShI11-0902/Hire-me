@@ -11,7 +11,7 @@ const Navbar = () => {
     <>
       <div className="navbar  top-10 flex items-center left-10 space-x-10 md:space-x-40 w-fit absolute z-10 justify-between  mx-auto">
         <div className="left">
-          <div className="logo w-36 text-2xl font-extrabold md:text-5xl text-purple-950">
+          <div className="logo w-36 text-2xl font-extrabold md:text-5xl text-[#ee928c]">
               HIRE ME.
           </div>
         </div>
@@ -20,8 +20,8 @@ const Navbar = () => {
             <li  >HOME</li>
             {
               isAuthenticated ? <li><button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-                Log Out
-              </button></li> : <li><button onClick={() => loginWithRedirect()}>Log In</button></li>
+                LOG OUT
+              </button></li> : <li><button onClick={() => loginWithRedirect()}>LOG IN</button></li>
             }
             <Link to="Jobpage">JOBS</Link>
           </ul>
@@ -32,14 +32,14 @@ const Navbar = () => {
               toggle ? (
                 ""
               ) :
-                <motion.div initial={{ x: -200 }} transition={{ ease: "backOut" }} animate={{ x: 0 }} className=" absolute bg-blue-100 w-full top-20 left-0 ">
+                <motion.div initial={{ x: -200 }} transition={{ ease: "backOut" }} animate={{ x: 0 }} className=" absolute bg-white rounded-tr-3xl rounded-bl-3xl w-full top-20 left-0 ">
                   <div className="nav-items my-10">
                     <ul className="flex flex-col space-y-10 items-center font-bold">
                       <a href=""><li  >HOME</li></a>
                       {
                         isAuthenticated ? <li><button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-                          Log Out
-                        </button></li> : <li><button onClick={() => loginWithRedirect()}>Log In</button></li>
+                          LOG OUT
+                        </button></li> : <li><button onClick={() => loginWithRedirect()}>LOG IN</button></li>
                       }
                        <Link to="Jobpage">JOBS</Link>
                     </ul>
