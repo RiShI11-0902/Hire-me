@@ -20,7 +20,7 @@ const Jobdeatils = () => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'c89334ff17msh32ab074cff7db3fp124129jsn65a99f4e0249',
+      'X-RapidAPI-Key': '0daa875fe5mshb660c4f7acadd44p15454djsnbb02356f9d46',
       'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
     }
   };
@@ -33,7 +33,7 @@ const Jobdeatils = () => {
   return (
     <>
       <Navbar />
-      <div className='mt-20 md:mt-40'>
+      <div className='mt-20 md:mt-40 bg-[#fbe6e4]'>
         {
           data?.data?.map(i => <div key={i.job_id} className='  mt-5  p-5'>
             <div className="top p-2 space-y-3">

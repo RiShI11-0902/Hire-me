@@ -51,7 +51,7 @@ const Navbar = () => {
 
         <div className="md:hidden ">
           {
-            toggle ? <GiHamburgerMenu onClick={() => setToggle(false)} /> : <GrClose onClick={() => setToggle(true)} />
+            toggle ? <GiHamburgerMenu className='text-black' onClick={() => setToggle(false)} /> : <GrClose onClick={() => setToggle(true)} />
           }
         </div>
       </div>

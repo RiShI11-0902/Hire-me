@@ -39,24 +39,40 @@ const Home = () => {
         </p>
         <button className='text-[#040101] hover:text-white border border-[#fbe6e4] hover:bg-[#ee928c] focus:ring-4 focus:outline-none focus:ring-[#fbe6e4] font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 p-5 w-fit mx-auto ml-[7rem] md:ml-[45em] mt-5'>CLICK ME</button>
       </div>
-      <div className="testimonials bg-[#fbe6e4] pt-20">
-        <div className="list">
-          <div className="box1 ">
-            <div className='top p-10 bg-[url("src/assets/pattern-bg.svg")] bg-no-repeat bg-cover w-full h-full'>
-              <img src={img} alt="" srcset="" />
-            </div>
-            <div className="middle flex mx-auto bg-white p-2 rounded-full w-fit space-x-10">
+      <div className="testimonials bg-[#fbe6e4] ">
+        <div className="title text-2xl font-bold text-center pt-10 p-3">What our Customers say about us</div>
+        <div className="list w-fit md:mx-auto ">
+          <div className="box1 md:flex md:flex-row md:justify-around md:w-fit md:p-10 items-center  ">
+            <div className='top p-10 bg-[url("src/assets/download.svg")] md:w-96 bg-no-repeat bg-cover w-full h-full'>
+              <img src={img} className='w-[25rem]' alt="" srcset="" />
+              <div className="middle hidden mt-5 md:flex mx-auto bg-white p-2 rounded-full w-fit space-x-10">
               <img onClick={chngimg} src={prev} alt="" srcset="" />
               <img onClick={chngimg} src={next} alt="" srcset="" />
             </div>
-            <div className="down p-5 ">
+            </div>
+            <div className="middle md:hidden flex mx-auto bg-white p-2 rounded-full w-fit space-x-10">
+              <img onClick={chngimg} src={prev} alt="" srcset="" />
+              <img onClick={chngimg} src={next} alt="" srcset="" />
+            </div>
+            <div className="down p-5 md:w-80">
               <p className='text-center text-base font-semibold'>
                {text}
               </p>
-              <p className='text-center mt-5 font-bold'>{name} <p className='mt-2
-font-light'>{title}</p></p>
+              <p className='text-center mt-5 font-bold'>{name} <p className='mt-2 font-light'>{title}</p></p>
             </div>
           </div>
+        </div>
+      </div>
+      <div className='footer bg-[#fbe6e4] bg-[url("src/assets/wave.svg")] bg-no-repeat bg-cover w-full h-[13rem] md:h-[16rem]'>
+        <div className="list ">
+          <ul className='flex flex-row space-x-5 w-fit mx-auto pt-28 md:pt-36'>
+          <li className='cursor-pointer'>HOME</li>
+          <li className='cursor-pointer'>ABOUT</li>
+          <li className='cursor-pointer'>CONTACT</li>
+          </ul>
+        <div className="copyright w-fit mx-auto font-extrabold p-5">
+          &#169; 2023 Hire me | All Rights Reserved
+        </div>
         </div>
       </div>
     </>

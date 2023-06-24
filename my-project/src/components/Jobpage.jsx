@@ -7,8 +7,8 @@ import { HiSelector } from "react-icons/hi";
 const Jobpage = () => {
 
   const [data, setData] = useState()
-  const [title, setTitle] = useState("python developer")
-  const [place, setPlace] = useState("texas usa")
+  const [title, setTitle] = useState("marketing manager")
+  const [place, setPlace] = useState("new york")
   const [date_posted, setDate_posted] = useState("")
   const [remote, setRemote] = useState("")
   const [empType, setEmpType] = useState("")
@@ -20,7 +20,7 @@ const Jobpage = () => {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'c89334ff17msh32ab074cff7db3fp124129jsn65a99f4e0249',
+      'X-RapidAPI-Key': '0daa875fe5mshb660c4f7acadd44p15454djsnbb02356f9d46',
       'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
     }
   };
@@ -38,16 +38,16 @@ const Jobpage = () => {
     <>
       <Navbar />
 
-      <div className="container mt-40  w-full mx-auto">
+      <div className="container mt-40 md:mt-48  w-full mx-auto">
         <div className="filters_query">
           <input type="text" placeholder='Select Title' className='px-4 w-[80%] h-12 my-2 border rounded-lg border-1 border-gray-300 outline-blue-500 ml-10' />
           <div className='flex flex-row space-x-8 items-center justify-start'>
             <input type="text" placeholder='Select Location' className='px-4 h-12 my-2 border rounded-lg border-1 border-gray-300 outline-blue-500 ml-10' />
-            <HiSelector className='' />
-            <CiFilter className='' />
+            <HiSelector className='text-black' />
+            <CiFilter className='text-black' />
           </div>
         </div>
-        <div className="list">
+        <div className="list ">
           <Jobbox  jobs={data} />
         </div>
       </div>
