@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/Jobpage' element={isAuthenticated ? <Jobpage /> : <Loginpage />} />
-          <Route path='/job/:id' element={<Jobdeatils />} />
+          <Route path='/jobDetails' element={<Jobdeatils />} />
         </Routes>
       </Router>
 
