@@ -32,7 +32,7 @@ const Navbar = () => {
               toggle ? (
                 ""
               ) :
-                <motion.div initial={{ x: -200 }} transition={{ ease: "backOut" }} animate={{ x: 0 }} className=" absolute bg-white rounded-tr-3xl rounded-bl-3xl w-full top-20 left-0 ">
+                <div initial={{ x: -200 }} transition={{ ease: "backOut" }} animate={{ x: 0 }} className=" absolute bg-white rounded-tr-3xl rounded-bl-3xl w-full top-20 left-0 ">
                   <div className="nav-items my-10">
                     <ul className="flex flex-col space-y-10 items-center font-bold">
                       <a href=""><li  >HOME</li></a>
@@ -44,7 +44,7 @@ const Navbar = () => {
                        <Link to="Jobpage">JOBS</Link>
                     </ul>
                   </div>
-                </motion.div>
+                </div>
             }
           </div>
         </div>

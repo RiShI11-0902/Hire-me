@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from './Navbar'
 import { mainImg, img2, tanya, next, prev, john } from '../assets'
+import { Link } from 'react-router-dom'
 const Home = () => {
   const [img, setImg] = useState(tanya)
   const [text, setText] = useState(` I was struggling for many months but then, I got my dream job through Hire Me. I Would highly recommend this.`)
@@ -17,7 +18,7 @@ const Home = () => {
       <div className="main-container bg-[#fbe6e4] w-full h-full min-w-full min-h-screen  flex flex-col-reverse md:flex-row md:justify-around items-center pb-5">
         <div className="title ">
           <p className=' p-5 mt-10 text-4xl text-[#040101]  leading-snug font-bold main-text'>Find Jobs From Across <br /> The World At One Place.</p>
-          <button className='bg-[#ea7d75] p-5 ml-5 font-semibold rounded-es-2xl'>REGISTER NOW.</button>
+        <Link to="/jobpage"> <button className='bg-[#ea7d75] p-5 ml-5 font-semibold rounded-es-2xl'>FIND JOBS</button> </Link>  
         </div>
         <div className="imgBox mt-20">
           <img src={img2} alt="" srcset="" />
