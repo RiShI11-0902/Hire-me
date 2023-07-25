@@ -51,20 +51,9 @@ const Jobpage = () => {
       <div className="container mt-40 md:mt-48 relative w-full md:w-[50%]  mx-auto">
         <div className="filters_query  ">
           <input type="text" placeholder='Select Title' className='px-4 w-[8-%] md:w-[80%] h-12 my-2 border rounded-lg border-1 border-gray-300 outline-blue-500 ml-10 ' onKeyUp={(event) => setTitle(event.target.value)} />
-          <div className='flex flex-row space-x-8 items-center justify-start'>
+          <div className='flex'>
             <input type="text" placeholder='Select Location' onKeyUp={(event) => setPlace(event.target.value)} className='px-4 h-12 my-2 border rounded-lg border-1  border-gray-300 outline-blue-500 ml-10' />
-            <HiSelector onClick={toggle} className='text-black' />
-            {/* <CiFilter onClick={()=>toggle("option")} className='text-black' /> */}
-            {
-              show  ? <div className='absolute bg-slate-300 rounded-3xl p-5 top-32  right-14'>
-                {timeArray.map((i) => {
-                  return <ul key={i} className='text-center mt-2 font-semibold'>
-                    <li className='hover:underline' onClick={()=>setDate_posted(i)}>{i}</li>
-                  </ul>
-                })}
-
-              </div> : ""
-            }
+           
           </div>
           <button className='bg-[#ea7d75] p-3 mt-5 w-fit mx-auto  ml-10 font-semibold rounded-es-2xl' onClick={() => setQuery()}>Search</button>
         </div>
