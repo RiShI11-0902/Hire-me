@@ -50,7 +50,7 @@ const Jobpage = () => {
 
       <div className="container mt-40 md:mt-48 relative w-full md:w-[50%]  mx-auto">
         <div className="filters_query  ">
-          <input type="text" placeholder='Select Title' className='px-4 w-[8-%] md:w-[20%] h-12 my-2 border rounded-lg border-1 border-gray-300 outline-blue-500 ml-10 ' onKeyUp={(event) => setTitle(event.target.value)} />
+          <input type="text" placeholder='Select Title' className='px-4 w-[8-%] md:w-[80%] h-12 my-2 border rounded-lg border-1 border-gray-300 outline-blue-500 ml-10 ' onKeyUp={(event) => setTitle(event.target.value)} />
           <div className='flex flex-row space-x-8 items-center justify-start'>
             <input type="text" placeholder='Select Location' onKeyUp={(event) => setPlace(event.target.value)} className='px-4 h-12 my-2 border rounded-lg border-1  border-gray-300 outline-blue-500 ml-10' />
             <HiSelector onClick={toggle} className='text-black' />
